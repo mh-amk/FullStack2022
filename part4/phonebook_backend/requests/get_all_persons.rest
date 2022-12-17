@@ -1,0 +1,42 @@
+
+GET http://localhost:3001/api/persons/638bc14ea9c0c2f89791cc88
+#####
+GET http://localhost:3001/api/persons
+#####
+DELETE http://localhost:3001/api/persons/638bc04ba9c0c2f89791cc7e
+####
+POST http://localhost:3001/api/persons/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "AliVali",
+    "number":"1234567890"
+}
+####
+PUT  http://localhost:3001/api/persons/638ce12852ff5680ba1114c8 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Ali",
+    "number":"321"
+}
+
+####
+PUT  http://localhost:3001/api/persons/638ce2ae8885a40a63597915 HTTP/1.1
+content-type: application/json
+
+{
+"number": "045-234-5678",
+"name": "Ali",
+"id":"638ce2ae8885a40a63597915"
+}
+
+### 
+PUT http://localhost:3001/api/persons/638ce2ae8885a40a63597915 HTTP/1.1 
+Content-Type: application/json
+
+{
+    "name": "Ali",
+    "number": "145-2345678",
+    "id":"638ce2ae8885a40a63597915"
+}
