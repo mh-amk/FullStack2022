@@ -1,5 +1,7 @@
 import { createContext, useReducer, useContext } from 'react'
 
+const NotificationContext = createContext()
+
 const notificationReducer = (state, action) => {
   switch (action.type) {
     case "VOTE":
@@ -14,8 +16,6 @@ const notificationReducer = (state, action) => {
         return state
   }
 }
-
-const NotificationContext = createContext()
 
 export const NotificationContextProvider = (props) => {
   const [notification, notificationDispatch] = useReducer(notificationReducer, '')

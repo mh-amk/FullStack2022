@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import {useQueryClient,useMutation } from 'react-query'
 import { updateAnecdote } from '../requests'
-import NotificationContext from '../NotificationContext'
+import NotificationContext,{UseNotificationDispatch} from '../NotificationContext'
 
 
 

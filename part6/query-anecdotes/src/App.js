@@ -11,7 +11,7 @@ const App = () => {
   const queryClient = useQueryClient()
   const updateAnecdoteMutation = useMutation(updateAnecdote, {
     onSuccess: () => {
-      queryClient.invalidateQueries('anecdotes')
+      queryClient.invalidateQueries('blogs')
       }
     })
 
