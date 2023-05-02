@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+//const mongoose = require('mongoose')
 const supertest = require('supertest')
 const helper = require('./test_helper')
 const app = require('../app')
@@ -8,7 +8,7 @@ const User = require('../models/user')
 
 describe('when there is initially one user in db', () => {
 
-    beforeEach(async () => {
+  beforeEach(async () => {
     await User.deleteMany({})
     const passwordHash = await bcrypt.hash('sekret', 10)
     const user = new User({ username: 'root', passwordHash })
@@ -57,5 +57,5 @@ describe('when there is initially one user in db', () => {
     const usersAtEnd = await helper.usersInDb()
     expect(usersAtEnd).toEqual(usersAtStart)
   }, 100000)
-  
+
 })

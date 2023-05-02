@@ -16,20 +16,28 @@ content-type: application/json
 }
 
 ####
-POST http://localhost:3001/api/blogs/ HTTP/1.1
+POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzOWM4OGMzMDNlOWM5N2MzMTlkMTU1YyIsImlhdCI6MTY3MTMwMDY4NCwiZXhwIjoxNjcxMzA0Mjg0fQ.Z1CLCsgjXZe3YeP8gz7CtnjP3ffFibDcYSvqHsxq6fY
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1oYW1rIiwiaWQiOiI2M2E5Zjc5YWMyZGViODE3MTU0MDk0YjIiLCJpYXQiOjE2ODI3ODc0OTUsImV4cCI6MTY4Mjc5MTA5NX0.zP2KtYJu7pUPBHyvLR71LvB3DYvTy7cjRT0_bXEAa4M
 
 {
-    "title":  "mhamk111111",
-    "author": "author 12 213",
+    "title":  "Comments1",
+    "author": "mhamk",
     "url": "http://mhamk.ir",
     "likes": 1,
     "userId": "639c88c303e9c97c319d155c"
 }
+####
+
+POST http://localhost:3003/api/blogs/64484df153b48c558e36a573/comments HTTP/1.1
+content-type: application/json
+
+{
+    "content":  "salam comment"
+}
 
 #####
-DELETE http://localhost:3001/api/blogs/639e0758c2d8ec812cae595b
+DELETE http://localhost:3001/api/blogs/644d4632d6c83d4209675689
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzOWM4OGMzMDNlOWM5N2MzMTlkMTU1YyIsImlhdCI6MTY3MTMwMDY4NCwiZXhwIjoxNjcxMzA0Mjg0fQ.Z1CLCsgjXZe3YeP8gz7CtnjP3ffFibDcYSvqHsxq6fY
 #####
 PUT  http://localhost:3001/api/blogs/638ce12852ff5680ba1114c8 HTTP/1.1
@@ -53,8 +61,8 @@ content-type: application/json
     "likes": 3
 }
 
-### 
-PUT http://localhost:3001/api/blogs/638ce2ae8885a40a63597915 HTTP/1.1 
+###
+PUT http://localhost:3001/api/blogs/638ce2ae8885a40a63597915 HTTP/1.1
 Content-Type: application/json
 
 {
